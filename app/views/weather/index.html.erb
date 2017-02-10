@@ -1,0 +1,26 @@
+<h2>Santa Clara Weather</h2>
+
+<ul>
+    <li>
+        <p>Current Tempurture:
+            <%= @current_tempurture %>
+            F</p>
+    </li>
+    <h3>Five Day Forecast:
+    </h3>
+    <% @five_day.each do |each_day| %>
+    <li>
+        date:
+        <%= each_day['date'] %><br>
+        day:
+        <%= each_day['day'] %><br>
+        high:
+        <%= each_day['high'] %> F<br>
+        low:
+        <%= each_day['low'] %> F<br>
+        weather:
+        <%= each_day['text'] %>
+        <br>
+    </li><br>
+    <% end %>
+</ul>
